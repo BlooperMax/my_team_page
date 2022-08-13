@@ -1,0 +1,153 @@
+*{
+  font-family: 'Poppins',arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body{
+  min-height: 100%;
+  background: #fafafa;
+}
+
+.mgb-10{
+  margin-bottom: 10px;
+}
+
+.main{
+  max-width: 960px ;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+.header{
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 6em;
+}
+
+.header-item{
+  width: 100%;
+  max-width: 460px;
+  font-size: 18px;
+}
+
+.header-item h2{
+  font-size: 18px;
+}
+
+.title{
+  font-family: "PT Serif",sans-serif;
+  font-size: 32px;
+  margin-bottom: 38px;
+}
+
+/* CSS Grid */
+.card-section{
+  max-width: 960px;
+  padding: 0 10px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(240px,1fr));
+  justify-items: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+  margin-bottom: 15px;
+}
+
+.personal{
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.personal img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.vertical-letters{
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.position{
+  white-space: nowrap;
+  writing-mode: vertical-lr;
+  font-family: "PT Serif",sans-serif;
+  font-size: 16px;
+  position: relative;
+  margin-left: 6px;
+}
+
+.card:nth-child(3n-1){
+  transform: translateY(60px);
+}
+
+.credits{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #a9a9a9;
+}
+
+.username{
+  font-weight: 700;
+  color: #a9a9a9;
+  text-decoration: underline;
+}
+
+@media (max-width:755px) {
+
+  .main{
+    margin-top: 40px;
+  }
+
+  .card{
+    margin: 0 15px 0 0;
+  }
+
+  .card:nth-child(3n-1){
+    transform: translateY(0);
+  }
+
+  .card:nth-child(even){
+    transform: translateY(60px);
+    margin: 0 0 30px 10px;
+  } 
+}
+
+@media (max-width:520px) {
+
+  .description{
+    font-size: 12px;
+  }
+
+  .card:nth-child(even){
+    transform: translateY(0);
+    margin: 0 15px 0 0;
+  }
+  
+  .credits{
+    font-size: 10px;
+  }
+
+}
